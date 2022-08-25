@@ -23,5 +23,22 @@ ActiveRecord::Base.logger = Logger.new(STDOUT)
 class Student < ActiveRecord::Base
 end
 
-binding.pry
-""
+# binding.pry
+# ""
+
+# Retrieve a list of all the columns in the table:
+Student.column_names
+
+# Create a new Student entry in the database
+Student.create(name: 'Jon')
+
+# Return all the records from the students table as instances of the Student class
+Student.all
+
+# Retrieve a Student from the database by id
+Student.find(1)
+
+# Find by any attribute, such as name
+Student.find_by(name: 'Jon')
+student.name
+student.save
